@@ -1,10 +1,10 @@
 {{extend 'layout.html'}}
-<p>You searched for property <i>{{=request.vars.properties}}</i> in instances of <i>{{=request.vars.instance_of}}</i></p>
+<p>You searched for property <i>{{=request.vars.property}}</i> in instances of <i>{{=request.vars.instance_of}}</i></p>
 
 {{response.files.append(URL('static','css/web2py-bootstrap4.css'))}}
 {{include 'web2py_ajax.html'}}
 
-<p><b>Analysis of prevalence of items exhibiting plurality per property:</b></p>
+<p><b>Analysis of prevalence of  plurality in items of instance <i>{{=request.vars.instance_of}}</i> by property:</b></p>
 {{table = data}}
 {{=TABLE(*table, _style='width:30%', _class='table', _id=0)}}
 
@@ -30,7 +30,7 @@
                 <td class="">
                     <ul>
                     {{for statement in item[2]:}}
-                        <li>{{=statement}}</li>
+                        <li>{{=statement[0]}} ({{=statement[1]}})</li>
                     {{pass}}
                     </ul>
                 </td>

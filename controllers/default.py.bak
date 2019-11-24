@@ -22,8 +22,8 @@ def index():
 #  propQ="P6375"
 
 def queryresult():
-    data = [['population', '2%'], ['height', '3%'], ['position', '7%'], ['name', '2%']] # Dummy data
-    items = [['Bern', 'population', ['123456', '121342']],['Zurich', 'population', ['234543', '235234']]]
+    data = [['population', '2%'], ['elevation above sea level', '3%'], ['area', '7%'], ['postal code', '0%']] # Dummy data
+    items = [['Bern', 'Q67929', 'population', [['123456', 'https://statistik.zh.ch/internet/justiz_inneres/statistik/de/daten/gemeindeportraet_kanton_zuerich.html?tab=indikatoren&jahr=2017&indikatoren=133&bfs=63'], ['121342', 'https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung.assetdetail.7966022.html']]], ['Zürich', 'Q72', 'population', [['234346', 'https://statistik.zh.ch/internet/justiz_inneres/statistik/de/daten/gemeindeportraet_kanton_zuerich.html?tab=indikatoren&jahr=2017&indikatoren=133&bfs=63'], ['243342', 'https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung.assetdetail.7966022.html']]],['Thusis', 'Q66171', 'population',[['3138','https://www.pxweb.bfs.admin.ch/pxweb/de/px-x-0102020000_201'],['3217', 'https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung.assetdetail.7966022.html']]], ['Kammersrohr', 'Q67929', 'population', [['28', 'https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung.assetdetail.7966022.html'], ['29', 'https://www.pxweb.bfs.admin.ch/pxweb/de/px-x-0102020000_201']]]]
     return dict(data=data, items=items)
 
 def _get_dropdown(stud_id, att_code, possible_att_code):
@@ -33,7 +33,6 @@ def _get_dropdown(stud_id, att_code, possible_att_code):
             option_list.append(OPTION(pac, _value=pac, _selected='selected'))
         else:
             option_list.append(OPTION(pac, _value=pac))
-
     return SELECT(*option_list, _name=stud_id)
 
 #def index():

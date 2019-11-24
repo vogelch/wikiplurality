@@ -4,7 +4,7 @@
 {{response.files.append(URL('static','css/web2py-bootstrap4.css'))}}
 {{include 'web2py_ajax.html'}}
 
-<p><b>Analysis of prevalence of items exhibiting plurality per property:</b></p>
+<p><b>Analysis of prevalence of  plurality in items of instance <i>{{=request.vars.instance_of}}</i> by property:</b></p>
 {{table = data}}
 {{=TABLE(*table, _style='width:30%', _class='table', _id=0)}}
 
@@ -25,12 +25,12 @@
     {{else:}}
         {{for item in items_list:}}
             <tr>
-                <td class="">{{=item[0]}}</td>
-                <td class="">{{=item[1]}}</td>
+                <td class="">{{=item[0]}} ({{=item[1]}})</td>
+                <td class="">{{=item[2]}}</td>
                 <td class="">
                     <ul>
-                    {{for statement in item[2]:}}
-                        <li>{{=statement}}</li>
+                    {{for statement in item[3]:}}
+                        <li>{{=statement[0]}} ({{=statement[1]}})</li>
                     {{pass}}
                     </ul>
                 </td>
