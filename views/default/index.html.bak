@@ -1,0 +1,13 @@
+{{extend 'layout.html'}}
+<p>Please enter what you want to query:</p>
+<form action="{{=URL('queryresult')}}">
+  <select id="instance_of" name="instance_of" >
+    <option value='0'>(Select property)</option>
+    {{for item in option_list:}}
+    <option value="{{=item}}">{{=item}}</option>
+    {{pass}}
+  </select>
+  <input name="geographic_location" />
+  <br />
+  <input type="submit" />
+</form>

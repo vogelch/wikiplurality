@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+properties = ['Computer', 'Electronics', 'Cars', 'Video Games']
+
+db.define_table('posts',
+    Field('title', requires=IS_NOT_EMPTY()),  
+    Field('interests'),  
+    Field('category', requires=IS_IN_SET(post_categories)),
+    Field('body', "text")
+    )
