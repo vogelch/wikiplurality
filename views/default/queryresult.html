@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-<p>You searched for property <i>{{=request.vars.properties}}</i> in instances of <i>{{=request.vars.instance_of}}</i></p>
+<p>You searched for property <i>{{=request.vars.property}}</i> in instances of <i>{{=request.vars.instance_of}}</i></p>
 
 {{response.files.append(URL('static','css/web2py-bootstrap4.css'))}}
 {{include 'web2py_ajax.html'}}

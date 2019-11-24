@@ -33,7 +33,6 @@ def _get_dropdown(stud_id, att_code, possible_att_code):
             option_list.append(OPTION(pac, _value=pac, _selected='selected'))
         else:
             option_list.append(OPTION(pac, _value=pac))
-
     return SELECT(*option_list, _name=stud_id)
 
 #def index():

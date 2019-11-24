@@ -4,12 +4,12 @@
 {{response.files.append(URL('static','css/web2py-bootstrap4.css'))}}
 {{include 'web2py_ajax.html'}}
 
-<p>Analysis of prevalence of items exhibiting plurality per property:</p>
+<p><b>Analysis of prevalence of items exhibiting plurality per property:</b></p>
 {{table = data}}
 {{=TABLE(*table, _style='width:30%', _class='table', _id=0)}}
 
 {{items_list = items}}
-<p>Items exhibiting plurality:</p>
+<p><b>Items exhibiting plurality:</b></p>
 <table width="100%" class="table">
     <thead>
         <tr>

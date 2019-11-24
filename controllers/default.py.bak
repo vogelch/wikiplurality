@@ -9,7 +9,7 @@ if path not in sys.path:
 def index():
     option_list_instance_of = ['municipality', 'museums', 'statue']
     option_list_properties = ['inhabitants', 'coordinates', 'address']
-    return dict(option_list=option_list)
+    return dict(option_list_instance_of=option_list_instance_of, option_list_properties=option_list_properties)
 
 #municipalities, inhabitants
 #  typeQ="Q70208"
